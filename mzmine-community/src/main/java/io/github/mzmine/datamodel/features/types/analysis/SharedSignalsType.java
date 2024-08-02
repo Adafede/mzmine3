@@ -25,18 +25,18 @@
 
 package io.github.mzmine.datamodel.features.types.analysis;
 
-import io.github.mzmine.datamodel.features.types.abstr.BooleanType;
+import io.github.mzmine.datamodel.features.types.numbers.abstr.IntegerType;
 import org.jetbrains.annotations.NotNull;
 
-public class IsLikelyISFType extends BooleanType {
+public class SharedSignalsType extends IntegerType {
 
   @Override
   public @NotNull String getUniqueID() {
-    return "is_likely_isf";
+    return "shared_signals";
   }
 
   @Override
   public @NotNull String getHeaderString() {
-    return "Is Likely ISF";
+    return "Shared signals";
   }
 }

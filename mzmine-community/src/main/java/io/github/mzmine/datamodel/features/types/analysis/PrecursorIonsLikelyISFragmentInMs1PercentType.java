@@ -25,18 +25,21 @@
 
 package io.github.mzmine.datamodel.features.types.analysis;
 
-import io.github.mzmine.datamodel.features.types.numbers.abstr.IntegerType;
+import io.github.mzmine.datamodel.features.types.numbers.abstr.PercentType;
 import org.jetbrains.annotations.NotNull;
 
-public class Ms1FragmentedSignalsType extends IntegerType {
+/**
+ * Number of precursor ions that match fragment signals in any MS2 scan in RT range
+ */
+public class PrecursorIonsLikelyISFragmentInMs1PercentType extends PercentType {
 
   @Override
   public @NotNull String getUniqueID() {
-    return "ms1_fragmented_signals";
+    return "likely_isf_in_ms1_percent";
   }
 
   @Override
   public @NotNull String getHeaderString() {
-    return "MS1 fragmented signals";
+    return "Precursor ions likely in-source fragments in MS1";
   }
 }
